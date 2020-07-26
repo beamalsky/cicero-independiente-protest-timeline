@@ -2,12 +2,12 @@ import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import { Col, Row } from 'react-bootstrap'
 import Img from "gatsby-image"
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 import Hero from '../components/hero'
-import SSWNameplateWhite from '../components/sswnameplatewhite'
-import config from '../components/config.js'
+import Language from "../components/language"
 
-const HeaderSection = () => (
+const HeaderSection = ({ intl }) => (
   <StaticQuery
     query={
       graphql`
@@ -41,11 +41,21 @@ const HeaderSection = () => (
             textAlign: 'center',
             backgroundColor: 'black'
           }}>
-              {/* <SSWNameplateWhite /> */}
-              <h1 style={{color: 'white'}}>{config.title}</h1>
-              <h3 className="dek">{config.subtitle}</h3>
-              <p className='byline'>By Jesus J. Montero, Irene Romulo, Ankur Singh, and April Alonso<br />Web interactive by Bea Malsky</p>
-              <p className='subbyline'>Cover photo by TK</p>
+              <Language />
+              <h1 style={{color: 'white'}}>
+                <FormattedMessage id="hed" />
+              </h1>
+              <h3 className="dek">
+                <FormattedMessage id="dek" />
+              </h3>
+              <p className='byline'>
+                <FormattedMessage id="byline" />
+                <br />
+                <FormattedMessage id="byline2" />
+              </p>
+              <p className='subbyline'>
+                <FormattedMessage id="subbyline" />
+              </p>
           </div>
         </Hero>
         <div id="intro" style={{
@@ -103,4 +113,4 @@ const HeaderSection = () => (
   />
 )
 
-export default HeaderSection
+export default injectIntl(HeaderSection)

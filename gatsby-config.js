@@ -28,7 +28,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -43,7 +43,8 @@ module.exports = {
             mapping: {
               'full_width_image' : 'fileNode',
               'image' : 'fileNode',
-              'description': 'text/markdown'
+              'description': 'text/markdown',
+              'description_es': 'text/markdown'
             }
           }
         ]
@@ -54,7 +55,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-30162627-4",
+        trackingId: "",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`en`, `es`],
+        defaultLanguage: `en`,
+        redirect: false,
       },
     },
   ],

@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const SSWNameplate = () => {
+const Nameplate = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "ssw-nameplate.png" }) {
@@ -33,4 +33,4 @@ const SSWNameplate = () => {
   )
 }
 
-export default SSWNameplate
+export default Nameplate
