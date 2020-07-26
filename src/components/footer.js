@@ -1,5 +1,6 @@
 import React from "react"
 import { Col, Row } from 'react-bootstrap'
+import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 import Nameplate from '../components/nameplate'
 
@@ -10,7 +11,7 @@ const Footer = () => {
         <Row>
           <Col className="main-text-column" xs={12} md={7}>
             <p class="footer">
-              Footer text TK
+              <FormattedMessage id="footer" />
             </p>
           </Col>
         </Row>
@@ -19,4 +20,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default injectIntl(Footer)

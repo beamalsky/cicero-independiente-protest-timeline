@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import mapboxgl from 'mapbox-gl'
 import scrollama from 'scrollama'
 import Img from "gatsby-image"
+import { useIntl } from "gatsby-plugin-intl"
 
 import SEO from '../components/seo'
 import HeaderSection from '../components/headersection'
@@ -143,8 +144,10 @@ class Index extends Component {
     }
 }
 
-function Chapter({id, theme, full_width_image, title, image, description, media_embed, currentChapterID}) {
+function Chapter({id, theme, full_width_image, title, title_es, image, description, description_es, media_embed, currentChapterID}) {
     const classList = id === currentChapterID ? "step active" : "step";
+    const intl = useIntl()
+
     if (full_width_image) {
       return (
         <Img
@@ -156,32 +159,45 @@ function Chapter({id, theme, full_width_image, title, image, description, media_
         <div id="features" className={alignments[config.alignment]}>
           <div id={id} className={classList}>
               <div className={theme}>
-                    { image &&
-                      <Img
-                        fluid={image.localFiles[0].childImageSharp.fluid}
-                        className="mb-5"
-                      />
-                    }
-                  { title &&
-                      <h3 className="dek mt-3 mb-3">{title}</h3>
-                  }
-                  { description &&
-                      <div
-                        dangerouslySetInnerHTML={{ __html: description }}
-                        style={{
-                          padding: '0'
-                        }}
-                      />
-                  }
-                  {
-                    media_embed &&
-                    <div
-                      dangerouslySetInnerHTML={{ __html: media_embed }}
-                      style={{
-                        padding: '0'
-                      }}
-                    />
-                  }
+                { image &&
+                  <Img
+                    fluid={image.localFiles[0].childImageSharp.fluid}
+                    className="mb-5"
+                  />
+                }
+                { title && intl.locale === 'es' &&
+                  <h3 className="dek mt-3 mb-3">{title_es}</h3>
+                }
+                { title && intl.locale === 'en' &&
+                  <h3 className="dek mt-3 mb-3">{title}</h3>
+                }
+                {
+                  description && intl.locale === 'es' &&
+                  <div
+                    dangerouslySetInnerHTML={{ __html: description_es }}
+                    style={{
+                      padding: '0'
+                    }}
+                  />
+                }
+                {
+                  description && intl.locale === 'en' &&
+                  <div
+                    dangerouslySetInnerHTML={{ __html: description }}
+                    style={{
+                      padding: '0'
+                    }}
+                  />
+                }
+                {
+                  media_embed &&
+                  <div
+                    dangerouslySetInnerHTML={{ __html: media_embed }}
+                    style={{
+                      padding: '0'
+                    }}
+                  />
+                }
               </div>
           </div>
         </div>
@@ -248,6 +264,7 @@ export const query = graphql`
             }
           }
           title
+          title_es
           image {
             localFiles {
               childImageSharp {
@@ -269,6 +286,11 @@ export const query = graphql`
             }
           }
           description {
+            childMarkdownRemark {
+              html
+            }
+          }
+          description_es {
             childMarkdownRemark {
               html
             }

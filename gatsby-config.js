@@ -43,7 +43,8 @@ module.exports = {
             mapping: {
               'full_width_image' : 'fileNode',
               'image' : 'fileNode',
-              'description': 'text/markdown'
+              'description': 'text/markdown',
+              'description_es': 'text/markdown'
             }
           }
         ]
@@ -63,7 +64,7 @@ module.exports = {
         path: `${__dirname}/src/intl`,
         languages: [`en`, `es`],
         defaultLanguage: `en`,
-        redirect: true,
+        redirect: false,
       },
     },
   ],
