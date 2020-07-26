@@ -1,7 +1,7 @@
 import React from "react"
 import { Col, Row } from 'react-bootstrap'
 
-import SSWNameplate from '../components/sswnameplate'
+import Nameplate from '../components/nameplate'
 
 const Footer = () => {
   return (
