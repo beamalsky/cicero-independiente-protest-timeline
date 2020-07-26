@@ -212,8 +212,10 @@ const IndexPage = ({data}) => {
       'id': `chapter-${record.data.id}`,
       'full_width_image': record.data.full_width_image,
       'title': record.data.title,
+      'title_es': record.data.title_es,
       'image': record.data.image,
       'description': record.data.description ? record.data.description.childMarkdownRemark.html : null,
+      'description_es': record.data.description_es ? record.data.description_es.childMarkdownRemark.html : null,
       'media_embed': record.data.media_embed,
       'location': {
         'center': [record.data.longitude, record.data.latitude],
