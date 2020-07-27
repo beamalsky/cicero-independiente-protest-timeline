@@ -2,7 +2,7 @@ require('dotenv').config({path: `.env`})
 
 module.exports = {
   siteMetadata: {
-    title: `What happened on June 1 in Cicero?`,
+    title: `What Happened on June 1 in Cicero?`,
     description: `Dek tk`,
     twitterUsername: `@ciceronoticias`,
     url: "https://ssw-protest-timeline.netlify.app/", // No trailing slash allowed!
