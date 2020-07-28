@@ -22,7 +22,6 @@ Built using Mapbox's [Storytelling template](https://github.com/mapbox/storytell
     GATSBY_MAPBOX_KEY=''
     GATSBY_AIRTABLE_KEY=''
     GATSBY_BASE_ID=''
-
     ```
 
 2. Install dependencies:
