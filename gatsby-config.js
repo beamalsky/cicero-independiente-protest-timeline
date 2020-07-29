@@ -45,6 +45,10 @@ module.exports = {
               'image' : 'fileNode',
               'description': 'text/markdown',
               'description_es': 'text/markdown'
+            },
+            defaultValues: {
+              onChapterEnter: '',
+              onChapterExit: ''
             }
           }
         ]

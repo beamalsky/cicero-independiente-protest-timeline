@@ -166,10 +166,10 @@ function Chapter({id, theme, full_width_image, title, title_es, image, descripti
                   />
                 }
                 { title && intl.locale === 'es' &&
-                  <h3 className="dek mt-3 mb-3">{title_es}</h3>
+                  <h2 className="mt-3 mb-3">{title_es}</h2>
                 }
                 { title && intl.locale === 'en' &&
-                  <h3 className="dek mt-3 mb-3">{title}</h3>
+                  <h2 className="mt-3 mb-3">{title}</h2>
                 }
                 {
                   description && intl.locale === 'es' &&
