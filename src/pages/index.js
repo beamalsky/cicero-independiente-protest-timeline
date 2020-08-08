@@ -229,7 +229,7 @@ const IndexPage = ({data}) => {
     config.chapters.push(chapter)
   })
 
-  intl = useIntl()
+  const intl = useIntl()
 
   return (
     <>
@@ -237,6 +237,7 @@ const IndexPage = ({data}) => {
         title={intl.formatMessage({ id: "hed" })}
         description={intl.formatMessage({ id: "dek" })}
         image={intl.formatMessage({ id: "image" })}
+        locale={intl.locale}
       />
       />
       <Index {...config}/>

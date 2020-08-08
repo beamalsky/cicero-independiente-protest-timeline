@@ -1,7 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import { Col, Row } from 'react-bootstrap'
-import Img from "gatsby-image"
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 import Hero from '../components/hero'
