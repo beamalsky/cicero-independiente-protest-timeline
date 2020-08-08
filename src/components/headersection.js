@@ -37,7 +37,7 @@ const HeaderSection = ({ intl }) => {
           >
             <div style={{
               margin: '33vh auto',
-              padding: '4rem 5rem',
+              padding: '4rem 4rem',
               width: '70vw',
               textAlign: 'center',
               backgroundColor: 'black',
