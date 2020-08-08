@@ -16,7 +16,7 @@ import Img from "gatsby-image"
 const Nameplate = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "ssw-nameplate.png" }) {
+      placeholderImage: file(relativePath: { eq: "nameplate.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -27,8 +27,14 @@ const Nameplate = () => {
   `)
 
   return (
-    <a href="https://southsideweekly.com/">
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+    <a href="https://ciceroindependiente.com/">
+      <Img
+        fluid={data.placeholderImage.childImageSharp.fluid}
+        style={{
+          margin: '2rem auto',
+          width: '10vw'
+        }}
+      />
     </a>
   )
 }

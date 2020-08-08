@@ -37,10 +37,12 @@ const HeaderSection = ({ intl }) => {
           >
             <div style={{
               margin: '33vh auto',
-              width: '60vw',
-              padding: '4vh',
+              padding: '4rem 5rem',
+              width: '70vw',
               textAlign: 'center',
-              backgroundColor: 'black'
+              backgroundColor: 'black',
+              minWidth: '350px',
+              maxWidth: '900px'
             }}>
                 <Language />
                 <h1 style={{color: 'white'}}>

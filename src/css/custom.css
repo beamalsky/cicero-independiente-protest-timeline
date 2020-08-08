@@ -1,6 +1,7 @@
 :root {
   --highlight-color: #dfe946;
   --secondary-highlight-color: #e2e892;
+  --accent-color: #cb0337;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   padding-top: 10vh;
   padding-bottom: 10vh;
   z-index: 100;
+  max-width: 700px;
 }
 .centered {
   width: 50vw;
@@ -306,7 +308,7 @@ h1 {
   font-family: "leitura-news", "adobe-caslon-pro", "Georgia", serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   line-height: 1.3;
 }
 h2 {
@@ -681,7 +683,10 @@ pre tt:after {
     font-size: 100%;
   }
   h1 {
-    font-size: 2.2rem !important;
+    font-size: 1.9rem !important;
+  }
+  .dek {
+    font-size: 1.2rem !important;
   }
 }
 button {
@@ -752,7 +757,7 @@ button {
   color: black;
 }
 .main-text-column p a {
-  color: black;
+  color: var(--accent-color);
 }
 @media (max-width: 850px) {
   .main-text-column {
@@ -773,7 +778,6 @@ button {
 }
 .dek {
   margin-bottom: 0.7rem;
-  font-size: 1.2rem;
 }
 .photo-credit {
   font-weight: 500;
