@@ -8,8 +8,6 @@ import Hero from '../components/hero'
 import Language from "../components/language"
 
 const HeaderSection = ({ intl }) => {
-  console.log("hello")
-  console.log(intl)
   return (
     <StaticQuery
       query={

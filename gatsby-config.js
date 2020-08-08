@@ -2,11 +2,11 @@ require('dotenv').config({path: `.env`})
 
 module.exports = {
   siteMetadata: {
-    title: `What Happened on June 1 in Cicero?`,
-    description: `Dek tk`,
+    title: `June 1 and Beyond: Confronting Racism in Cicero`,
+    description: `June 1 and Beyond: Confronting Racism in Cicero`,
     twitterUsername: `@ciceronoticias`,
-    url: "https://ssw-protest-timeline.netlify.app/", // No trailing slash allowed!
-    image: "/card.png"
+    url: "https://confrontingracism.ciceroindependiente.com", // No trailing slash allowed!
+    image: "/card.jpg"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
