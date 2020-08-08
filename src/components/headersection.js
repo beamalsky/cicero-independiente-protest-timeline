@@ -19,13 +19,6 @@ const HeaderSection = ({ intl }) => {
                 }
               }
             }
-            blm: file(relativePath: { eq: "teddy_waffles_blm.jpg" }) {
-              childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         `
       }
@@ -34,15 +27,18 @@ const HeaderSection = ({ intl }) => {
           <Hero
             fluid={data.header.childImageSharp.fluid}
           >
-            <div style={{
-              margin: '33vh auto',
-              padding: '4rem 4rem',
-              width: '70vw',
-              textAlign: 'center',
-              backgroundColor: 'black',
-              minWidth: '350px',
-              maxWidth: '850px'
-            }}>
+            <div
+              style={{
+                margin: '33vh auto',
+                padding: '4rem 4rem',
+                width: '70vw',
+                textAlign: 'center',
+                backgroundColor: 'black',
+                minWidth: '250px',
+                maxWidth: '850px'
+              }}
+              className='header-div'
+            >
                 <Language />
                 <h1 style={{color: 'white', fontSize: '2.4rem', fontStyle: 'normal'}}>
                   <FormattedMessage id="hed" />

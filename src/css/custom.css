@@ -56,7 +56,6 @@ body {
 .step {
   padding-top: 25vh;
   padding-bottom: 25vh;
-  opacity: 0.25;
 }
 .step.active {
   opacity: 0.9;
@@ -684,10 +683,19 @@ pre tt:after {
     font-size: 100%;
   }
   h1 {
-    font-size: 1.9rem !important;
+    font-size: 1.5rem !important;
   }
   .dek {
-    font-size: 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+  .byline {
+    font-size: 0.8rem !important;
+  }
+  .header-div {
+    padding: 1.5rem !important;
+  }
+  .twitter-tweet {
+    padding: 0rem !important;
   }
 }
 button {

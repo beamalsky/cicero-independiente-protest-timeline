@@ -1,6 +1,6 @@
 import React from "react"
 import { Col, Row } from 'react-bootstrap'
-import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { injectIntl } from "gatsby-plugin-intl"
 
 import Nameplate from '../components/nameplate'
 
