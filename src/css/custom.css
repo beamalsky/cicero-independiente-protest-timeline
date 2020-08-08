@@ -1,7 +1,7 @@
 :root {
   --highlight-color: #dfe946;
   --secondary-highlight-color: #e2e892;
-  --accent-color: #cb0337;
+  --accent-color: #dc033d;
 }
 
 body {
@@ -308,8 +308,10 @@ h1 {
   font-family: "leitura-news", "adobe-caslon-pro", "Georgia", serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
   line-height: 1.3;
+  color: var(--accent-color);
+  font-style: italic;
 }
 h2 {
   margin-left: 0;

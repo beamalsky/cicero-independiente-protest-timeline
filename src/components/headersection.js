@@ -42,10 +42,10 @@ const HeaderSection = ({ intl }) => {
               textAlign: 'center',
               backgroundColor: 'black',
               minWidth: '350px',
-              maxWidth: '900px'
+              maxWidth: '850px'
             }}>
                 <Language />
-                <h1 style={{color: 'white'}}>
+                <h1 style={{color: 'white', fontSize: '2.4rem', fontStyle: 'normal'}}>
                   <FormattedMessage id="hed" />
                 </h1>
                 <h3 className="dek">
