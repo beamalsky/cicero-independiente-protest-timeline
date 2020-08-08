@@ -239,7 +239,6 @@ const IndexPage = ({data}) => {
         image={intl.formatMessage({ id: "image" })}
         locale={intl.locale}
       />
-      />
       <Index {...config}/>
     </>
   )
