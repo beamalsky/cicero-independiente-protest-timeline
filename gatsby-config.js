@@ -6,7 +6,7 @@ module.exports = {
     description: `June 1 and Beyond: Confronting Racism in Cicero`,
     twitterUsername: `@ciceronoticias`,
     url: "https://confrontingracism.ciceroindependiente.com", // No trailing slash allowed!
-    image: "/card.jpg"
+    image: "/card.png"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

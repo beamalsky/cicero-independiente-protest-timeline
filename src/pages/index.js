@@ -229,9 +229,16 @@ const IndexPage = ({data}) => {
     config.chapters.push(chapter)
   })
 
+  intl = useIntl()
+
   return (
     <>
-      <SEO title={config.title} />
+      <SEO
+        title={intl.formatMessage({ id: "hed" })}
+        description={intl.formatMessage({ id: "dek" })}
+        image={intl.formatMessage({ id: "image" })}
+      />
+      />
       <Index {...config}/>
     </>
   )
